@@ -16,6 +16,14 @@
         /* grid-template-columns: 33.3% 33.3% 33.3%; */
         /* grid-template-columns: 1fr 1fr 3fr; */
         grid-template-columns: repeat(3,1fr);
+        /* grid-auto-rows: 100px; */
+        /* grid-auto-rows: minmax(100px,auto); */
+        /* grid-template-rows: 300px 100px 200px; */
+        /* grid-template-rows: repeat(3,200px); */
+        grid-template-rows: repeat(3,minmax(100px , auto));
+        /* column-gap: 10px;
+        row-gap:10px; */
+        gap:10px;
     }
     #content div {
         background-color: rgb(62, 128, 204);
@@ -47,7 +55,8 @@
             <p>1</p>
         </div>
         <div>
-            <p>2</p>
+            <!-- <p>2</p> -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis error vero accusamus enim dolor, culpa nam facilis ipsa maxime esse debitis odit dignissimos tenetur, quidem, asperiores eos at vel ipsum.</p>
         </div>
         <div>
             <p>3</p>
