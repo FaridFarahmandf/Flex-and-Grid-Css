@@ -6,8 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid</title>
 </head>
+
+<style>
+    #content {
+        margin: 0 auto;
+        max-width: 1200px;
+        background-color: antiquewhite;
+        display: grid;
+        /* grid-template-columns: 33.3% 33.3% 33.3%; */
+        /* grid-template-columns: 1fr 1fr 3fr; */
+        grid-template-columns: repeat(3,1fr);
+    }
+    #content div {
+        background-color: rgb(62, 128, 204);
+        padding: 30px;
+        text-align: center;
+        border: 1px solid black;
+        color: white;
+    }
+    #content div:nth-child(even){
+        background-color: #ccc;
+        color: black;
+    }
+</style>
 <body>
-    <div id="content">
+    <!-- <div id="content">
         <header>Header</header>
 
         <main>Main</main>
@@ -17,6 +40,36 @@
         <nav>Nav</nav>
 
         <footer>Footer</footer>
+    </div> -->
+    
+    <div id="content">
+        <div>
+            <p>1</p>
+        </div>
+        <div>
+            <p>2</p>
+        </div>
+        <div>
+            <p>3</p>
+        </div>
+        <div>
+            <p>4</p>
+        </div>
+        <div>
+            <p>5</p>
+        </div>
+        <div>
+            <p>6</p>
+        </div>
+        <div>
+            <p>7</p>
+        </div>
+        <div>
+            <p>8</p>
+        </div>
+        <div>
+            <p>9</p>
+        </div>
     </div>
     
 </body>
