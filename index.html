@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
+    <p id="p10"></p>
+
+    <script>
+      const AddadeAval = () => {
+        let prime = [];
+        let notPrime = [];
+        for (let i = 2; i <= 70; i++) {
+          if (i == 2 || i == 3) {
+            prime.push(i);
+          } else {
+            for (let j = 2; j < i; j++) {
+              if (i % j === 0) {
+                notPrime.push(i);
+                break;
+              } else if (j == i - 1) {
+                prime.push(i);
+              }
+            }
+          }
+        }
+        document.getElementById("p1").innerHTML = `Prime Numbers : ${prime}`;
+        document.getElementById(
+          "p2"
+        ).innerHTML = `Not Prime Numbers : ${notPrime}`;
+      };
+      AddadeAval();
+      const checkPrime = (number) => {
+        let isPrime = true;
+        for (let i = 2; i <= (number/2); i++) {
+          if (number % i == 0) {
+            isPrime = false;
+            break;
+          } else if (i == number - 1) {
+            isPrime = true;
+            break;
+          }
+        }
+        document.getElementById(
+          "p3"
+        ).innerHTML = `is number : ${number} prime ? ${isPrime}`;
+      };
+      checkPrime(105);
+
+      let factoriel = (number) => {
+          if(number == 1 || number == 0 || number < 0){
+              return 1 ;
+          }else{
+              return number * factoriel(number - 1) ;
+          }
+        }
+        document.getElementById("p4").innerHTML = factoriel(0);
+        
+        let khayamMosalas = () => {
+            let orgArr = [] ;
+            let myArr = [] ;
+            for (let i = 0; i <= 8; i++) {
+                for(let j = 0 ; j<= i ; j++) {
+                    myArr.push(factoriel(i)/(factoriel(i-j)*factoriel(j)));
+                }
+                orgArr.push(myArr);
+                myArr = [];
+            }
+        document.getElementById("p5").innerHTML = "khayam : "+ orgArr;
+        let str = "";
+        orgArr.forEach(element => {
+            str += element + "<br>"
+        });   
+        document.getElementById("p6").innerHTML = str;
+      }
+      khayamMosalas();
+    </script>
+  </body>
+</html>
