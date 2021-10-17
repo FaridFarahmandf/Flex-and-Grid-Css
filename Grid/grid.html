@@ -8,75 +8,61 @@
 </head>
 
 <style>
+    * {
+        margin: 0 ;
+        padding: 0;
+    }
     #content {
         margin: 0 auto;
-        max-width: 1200px;
-        background-color: antiquewhite;
         display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(6,minmax(100px , auto));
-        gap:10px;
+        max-width: 960px;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: minmax(100px,auto);
+        gap: 10px;
+        /* align-items:start ; */
+        /* align-items: end; */
+        /* justify-items: start; */
+        /* justify-items: end; */
     }
     #content div {
-        background-color: rgb(62, 128, 204);
+        background-color: rgb(22, 101, 247);
         padding: 30px;
-        text-align: center;
-        border: 1px solid black;
-        color: white;
     }
-    #content div:nth-child(even){
-        background-color: #ccc;
-        color: black;
-    }
-    .one {
-        grid-column-start: 1;
-        grid-column-end: 5;
-    }
+        .one {
+            justify-self: start;
+            align-self: start;
+        }
     .two {
-        grid-column: 3/5;
+        justify-self: start;
+        align-self: center;
     }
-    .three {
-        grid-column: 1/3;
-        grid-row-start: 2;
-        grid-row-end: 4;
+    .three{
+        align-self: end;
+        justify-self: start;
     }
-    .four{
-        grid-column: 3/5;
+    .four {
+        align-self: start;
+        justify-self: start;
     }
     .five {
-        grid-column: 1/3 ;
-        grid-row: 4/6;
+        align-self: center;
+        justify-self: center;
     }
     .six {
-        grid-column:4/5;
+        align-self: end;
+        justify-self: end;
     }
-    .nine {
-        grid-column: 3/4;
-        grid-row:4/5
-    }
+
 </style>
 <body>
-    <!-- <div id="content">
-        <header>Header</header>
-
-        <main>Main</main>
-
-        <aside>Aside</aside>
-
-        <nav>Nav</nav>
-
-        <footer>Footer</footer>
-    </div> -->
-    
     <div id="content">
         <div class="one">
             <p>1</p>
         </div>
         <div class="two">
             <p>2</p>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis error vero accusamus enim dolor, culpa nam facilis ipsa maxime esse debitis odit dignissimos tenetur, quidem, asperiores eos at vel ipsum.</p> -->
         </div>
-        <div class="three">
+        <div class="three">        
             <p>3</p>
         </div>
         <div class="four">
@@ -87,15 +73,6 @@
         </div>
         <div class="six">
             <p>6</p>
-        </div>
-        <div class="seven">
-            <p>7</p>
-        </div>
-        <div class="eight">
-            <p>8</p>
-        </div>
-        <div class="nine">
-            <p>9</p>
         </div>
     </div>
     
